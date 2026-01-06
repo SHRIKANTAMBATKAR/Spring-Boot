@@ -12,7 +12,7 @@ The purpose of this repository is **learning and concept clarity**, not building
 - Spring Boot applications start from a `main()` method using `SpringApplication.run()`
 - Spring creates an **Application Context**, which acts as a container for all objects (beans)
 - Auto-configuration configures components based on dependencies without manual setup
-
+- 
 ---
 
 ### 2. Component Scanning & Annotations
