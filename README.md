@@ -1,6 +1,6 @@
 # What I Learned from Spring Boot 
 
-This repository documents my **learning journey with Spring Boot**, focusing on how a Spring Boot application works internally and how CRUD operations are implemented using REST APIs, Hibernate (JPA), and MySQL.
+This repository documents my **learning journey with Spring Boot**, focusing on how a Spring Boot application works internally and how backend concepts are applied in real-world REST APIs.
 
 The purpose of this repository is **learning and concept clarity**, not building a complex application.
 
@@ -12,7 +12,7 @@ The purpose of this repository is **learning and concept clarity**, not building
 - Spring Boot applications start from a `main()` method using `SpringApplication.run()`
 - Spring creates an **Application Context**, which acts as a container for all objects (beans)
 - Auto-configuration configures components based on dependencies without manual setup
-- 
+
 ---
 
 ### 2. Component Scanning & Annotations
@@ -30,6 +30,7 @@ Spring automatically creates and manages objects using **Dependency Injection**.
 
 ### 3. Understanding Layered Architecture
 I learned how Spring Boot applications are structured in layers:
+
 - Controller handles HTTP requests
 - Service handles business logic
 - Repository communicates with the database
@@ -69,28 +70,65 @@ I learned how Spring Boot applications are structured in layers:
 
 ---
 
+## ✅ Validation & Exception Handling
+
+### Validation
+- Learned to validate incoming API data using **Bean Validation**
+- Applied validation annotations on DTOs instead of entities
+- Used `@Valid` in controllers to trigger validation
+- Prevented invalid data from reaching the service and database layers
+
+### Global Exception Handling
+- Implemented centralized exception handling using `@ControllerAdvice`
+- Handled validation errors, custom business exceptions, and generic errors
+- Returned clean and meaningful HTTP responses instead of stack traces
+- Improved API reliability and client experience
+
+---
+
+## 🔄 DTO & Model Mapping
+
+### DTO (Data Transfer Object)
+- Used DTOs to separate API contracts from database entities
+- Prevented direct exposure of entity classes
+- Applied validation at the API layer using DTOs
+- Improved flexibility and maintainability of APIs
+
+### ModelMapper
+- Used ModelMapper to convert DTOs to entities and vice versa
+- Reduced boilerplate getter-setter mapping code
+- Kept service layer clean and readable
+- Improved scalability for larger applications
+
+---
+
 ## 🌐 How HTTP Requests Are Processed
 I understood the internal request flow in Spring Boot:
 
-`DispatcherServlet` acts as the **front controller**, routing requests to the correct controller method.
+- Client sends HTTP request
+- Request reaches embedded Tomcat server
+- `DispatcherServlet` acts as the front controller
+- Request is routed to the correct controller method
+- Service and repository layers process the request
+- Response is returned as JSON
 
 ---
 
 ## ⚙️ Configuration & Dependency Management
 - Maven manages dependencies and project structure
 - `application.properties` is used for database and server configuration
-- Spring Boot auto-configures DataSource, JPA, and server settings
+- Spring Boot auto-configures DataSource, JPA, and embedded server
 
 ---
 
 ## 🧪 API Testing & Debugging Skills
-- Used Postman to test REST APIs
+- Used Postman and Swagger UI to test REST APIs
 - Understood HTTP methods and status codes
-- Debugged common issues like:
-  - 404 errors due to wrong URL mapping
+- Debugged common issues such as:
+  - 404 errors due to incorrect URL mapping
+  - Port conflicts
   - Missing dependencies
-  - Incorrect annotations
-  - Package scanning issues
+  - Incorrect annotations and package scanning issues
 
 ---
 
@@ -101,29 +139,28 @@ I understood the internal request flow in Spring Boot:
 - Exact URL mapping is critical
 - Layered architecture improves code quality
 - Hibernate simplifies database interaction
+- DTOs protect API structure
+- Validation and exception handling make APIs robust
 - Understanding flow is more important than memorizing code
 
 ---
 
 ## 🚀 Next Learning Goals
 
-- Add validation and exception handling
-- Learn DTO pattern
-- Integrate Swagger for API documentation
-- Understand Spring Security basics
-- Build a frontend with React
+- Pagination and sorting
+- Logging and monitoring
+- Spring Security with JWT
+- Unit and integration testing
+- Full-stack integration with React
 
 ---
 
 ## 🧾 Final Reflection
 
-This learning exercise helped me move from **theory to practical understanding** of Spring Boot.  
-Instead of just writing code, I now understand **how requests flow**, **how data is persisted**, and **how Spring Boot simplifies backend development**.
+This learning journey helped me move from **writing code** to **understanding how backend systems work**.  
+I now have a clear understanding of request flow, data validation, error handling, object mapping, and how Spring Boot simplifies enterprise backend development.
 
 ---
 
 **Author:** Shrikant Ambatkar  
 **Focus:** Learning Spring Boot & Backend Development
-
-
-
