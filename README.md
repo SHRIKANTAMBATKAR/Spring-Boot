@@ -1,7 +1,6 @@
 # What I Learned from Spring Boot 
 
 This repository documents my **learning journey with Spring Boot**, focusing on how a Spring Boot application works internally and how backend concepts are applied in real-world REST APIs.
-
 The purpose of this repository is **learning and concept clarity**, not building a complex application.
 
 ---
