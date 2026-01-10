@@ -5,3 +5,4 @@ import com.shrikant.employeecrud.entity.Employee;
 
 public interface EmployeeDao extends JpaRepository<Employee, Long> {
 }
+
