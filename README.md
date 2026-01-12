@@ -3,6 +3,7 @@ This repository documents my **learning journey with Spring Boot**, focusing on 
 The purpose of this repository is **learning and concept clarity**, not building a complex application.
 
 ---
+
 ## 🧠 Core Spring Boot Concepts I Learned
 
 ### 1. How a Spring Boot Application Starts
